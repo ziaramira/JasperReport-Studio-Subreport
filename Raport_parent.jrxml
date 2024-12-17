@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Raport_parent" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b20e97ea-a5ab-4997-b145-54967d1ea148">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="IlJFQ0VJUFQiIEFTICwxMDgsOSxhNTNhMjcyMC0xN2E5LTRlZmMtYWMyMi0zZDM1YjkyZmY4ZjY7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "RCRC_CODE",
+	"RCRC_RECEIPT_DATE",
+	"RCRC_ORDER"
+FROM "RECEIPT"]]>
+	</queryString>
+	<field name="RCRC_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RCRC_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="RCRC_CODE"/>
+	</field>
+	<field name="RCRC_RECEIPT_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="RCRC_RECEIPT_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="RCRC_RECEIPT_DATE"/>
+	</field>
+	<field name="RCRC_ORDER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RCRC_ORDER"/>
+		<property name="com.jaspersoft.studio.field.label" value="RCRC_ORDER"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="278" height="30" uuid="45befd21-89ea-4554-9449-8a317ed90979">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a24570fb-c32f-4076-b8e1-97faf4549fe9"/>
+				</reportElement>
+				<text><![CDATA[RCRC_CODE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="278" y="0" width="277" height="30" uuid="e0ebfc0e-9a3b-4a76-9e90-f52f32302b7e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0bd495ec-4399-4d07-91cb-04e787a553c5"/>
+				</reportElement>
+				<text><![CDATA[RCRC_RECEIPT_DATE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="278" height="30" uuid="dae786df-e01e-4b91-8a31-2f3deedfe142">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a24570fb-c32f-4076-b8e1-97faf4549fe9"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{RCRC_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="277" height="30" uuid="2f5a8e0f-9022-4bca-82a8-31ec02f6ec9d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0bd495ec-4399-4d07-91cb-04e787a553c5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{RCRC_RECEIPT_DATE}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="7" y="45" width="313" height="55" uuid="1712a59f-cdcf-4e66-b9c9-200d07bc26d5"/>
+				<subreportParameter name="code">
+					<subreportParameterExpression><![CDATA[$F{RCRC_ORDER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["Sous_raport.jrxml"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

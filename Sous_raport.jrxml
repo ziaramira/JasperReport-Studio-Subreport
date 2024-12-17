@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Sous_raport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30f58b8a-b1d2-4510-b9a1-ac5dd16d5e0a">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="test"/>
+	<parameter name="code" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT "POPO_CODE",
+	"POPO_DATE"
+FROM "ORDER_"
+WHERE "POPO_CODE" = $P{code}]]>
+	</queryString>
+	<field name="POPO_CODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="POPO_CODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="POPO_CODE"/>
+	</field>
+	<field name="POPO_DATE" class="java.sql.Timestamp">
+		<property name="com.jaspersoft.studio.field.name" value="POPO_DATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="POPO_DATE"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="278" height="30" uuid="2d9622b5-a508-4e48-9086-bc231a742df4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c626b1b-07fe-4346-b547-b36d90d80b78"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{POPO_CODE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="0" width="277" height="30" uuid="e529211e-d20b-4911-a16c-5a2fb91d9e48">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="18718891-d635-41e8-b1ac-8b963a09ebe8"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{POPO_DATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
