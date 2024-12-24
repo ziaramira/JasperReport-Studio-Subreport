@@ -10,3 +10,4 @@ This repository has instructions for creating a subreport in Jasper Report Studi
 <img src="https://github.com/user-attachments/assets/945f3500-ca3e-4c2b-b6ba-a96b4afda758" width="300" />
 
 <img src="https://github.com/user-attachments/assets/d6077ab6-6101-47e8-a766-bae810a5e338" width="300" />
+<h5>3- add a parametre of subraport (parametre join) .</h5>
