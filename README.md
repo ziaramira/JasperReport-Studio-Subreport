@@ -5,7 +5,8 @@ This repository has instructions for creating a subreport in Jasper Report Studi
 
 <img src="https://github.com/user-attachments/assets/42b61fed-6f6a-4618-a7bd-c6a61f2d0f89" width="180" />
 
-<h5>2- Select the option just create the subreport element.</h5>
+<h5>2- Select the option just create the subreport element and clic next and choise the option use sams JDBC.</h5>
 
 <img src="https://github.com/user-attachments/assets/945f3500-ca3e-4c2b-b6ba-a96b4afda758" width="300" />
 
+<img src="https://github.com/user-attachments/assets/d6077ab6-6101-47e8-a766-bae810a5e338" width="300" />
