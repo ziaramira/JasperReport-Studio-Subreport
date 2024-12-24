@@ -15,3 +15,4 @@ This repository has instructions for creating a subreport in Jasper Report Studi
 
 <h4> Remarque </h4>
 <h5>you have to click on the build all in subreport</h5>
+<img src="https://github.com/user-attachments/assets/5b0aa1b8-53bb-485e-9d95-06cc8c93b17f" width="300" />
